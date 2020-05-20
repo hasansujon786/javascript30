@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.rounded-full {
+  border-radius: 999999px;
+}
+.ab-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+body {
+  background-color: #eee;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: snow;
+}
+
+.clock {
+  --cl-h: 400px;
+  --cl-pad: 25px;
+  --cl-bg: #eee;
+
+  width: var(--cl-h);
+  height: var(--cl-h);
+  position: relative;
+  background-color: var(--cl-bg);
+  border: 10px solid #282828;
+}
+.clock-bg {
+  width: calc(100% - var(--cl-pad) * 4);
+  height: calc(100% - var(--cl-pad) * 4);
+  background-color: var(--cl-bg);
+}
+.dot {
+  width: 15px;
+  height: 15px;
+
+  background-color: tomato;
+  border-radius: 100px;
+}
+.lines {
+  width: 10px;
+  height: calc(100% - var(--cl-pad) * 2);
+  position: absolute;
+  left: calc(50% - 5px);
+  top: var(--cl-pad);
+
+  background-color: black;
+  border-radius: 3px;
+}
+.lines.b {
+  transform: rotate(calc(30 * 1deg)) ;
+}
+.lines.c {
+  transform: rotate(calc(30 * 2deg)) ;
+}
+.lines.d {
+  transform: rotate(calc(30 * 3deg)) ;
+}
+.lines.e {
+  transform: rotate(calc(30 * 4deg)) ;
+}
+.lines.f {
+  transform: rotate(calc(30 * 5deg)) ;
+}
+
+.hand {
+  width: var(--width);
+  border-radius: var(--width);
+  position: absolute;
+  left: calc(50% - var(--width) / 2);
+  bottom: 50%;
+  transform-origin: bottom;
+}
+.second {
+  --width: 3px;
+  background-color: tomato;
+  height: 180px;
+  transform: rotate(calc(6deg * 30)) translateY(20px);
+
+}
+.minute {
+  --width: 8px;
+  border: tomato solid 1.5px;
+  background-color: lightgray;
+  height: 150px;
+
+  transform: rotate(calc(6deg * 15));
+}
+.hour {
+  --width: 14px;
+  border: tomato solid 1.5px;
+  background-color: lightgray;
+  height: 110px;
+
+  transform: rotate(calc(6deg * 5));
+}
+
+.time {
+ top: 65%;
+}
+
+#log_model {
+  background-color: #eee;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  padding: 30px 30px;
+  min-height: 200px;
+  min-width: 500px;
+
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#log_model.hide {
+  display: none;
+}
