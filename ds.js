@@ -14,11 +14,11 @@ const log = (value) => {
     lists.insertAdjacentHTML('beforeend', `<li>${text}</li>`)
   }
 }
-
-
 window.addEventListener('keyup', (e) => {
   if(e.key === 'h' && e.altKey) {
     const model = document.querySelector('#log_model')
     model.classList.toggle('hide')
   }
 })
+
+// ############################################################################ //
