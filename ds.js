@@ -1,5 +1,4 @@
-
-export const log = (value) => {
+const log = (value) => {
   const body = document.querySelector('body')
   text = JSON.stringify(value, null, 2)
   const lists = document.querySelector('#log_model ul')
