@@ -12,20 +12,16 @@
   top: 50%;
   transform: translateY(-50%) translateX(-50%);
 }
-body {
-  background-color: #eee;
-}
-
-section {
+.container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: snow;
+  background-color: rosybrown;
 }
 
 .clock {
-  --cl-h: 400px;
+  --cl-h: 300px;
   --cl-pad: 25px;
   --cl-bg: #eee;
 
@@ -48,7 +44,7 @@ section {
   border-radius: 100px;
 }
 .lines {
-  width: 10px;
+  width: 8px;
   height: calc(100% - var(--cl-pad) * 2);
   position: absolute;
   left: calc(50% - 5px);
@@ -84,23 +80,23 @@ section {
 .second {
   --width: 3px;
   background-color: tomato;
-  height: 180px;
-  transform: rotate(calc(6deg * 30)) translateY(20px);
+  height: calc(var(--cl-h) / 2 - var(--cl-pad));
 
+  transform: rotate(calc(6deg * 30)) translateY(20px);
 }
 .minute {
   --width: 8px;
   border: tomato solid 1.5px;
   background-color: lightgray;
-  height: 150px;
+  height: calc(var(--cl-h) / 2 - ( var(--cl-pad) + 20px ));
 
   transform: rotate(calc(6deg * 15));
 }
 .hour {
-  --width: 14px;
+  --width: 12px;
   border: tomato solid 1.5px;
   background-color: lightgray;
-  height: 110px;
+  height: calc(var(--cl-h) / 2 - ( var(--cl-pad) * 3 ));
 
   transform: rotate(calc(6deg * 5));
 }

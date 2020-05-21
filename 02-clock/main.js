@@ -38,16 +38,16 @@ const updateClockHands = () => {
   let hours = today.getHours()
   time.innerText = `${hours}: ${minutes}: ${seconds}`
 
-  secondHand.style.transform = `rotate(${seconds * 6}deg) translateY(20px)`
-  minuteHnad.style.transform = `rotate(${minutes * 6}deg)`
-  hourHand.style.transform = `rotate(${hours * 30 + (minutes / 2)}deg)`
+  let secondDegres = seconds * 6
+  let minuteDegres = minutes * 6
+  let hourDegres = hours * 30 + (minutes / 2)
+
+  secondHand.style.transform = `rotate(${secondDegres}deg) translateY(20px)`
+  minuteHnad.style.transform = `rotate(${minuteDegres}deg)`
+  hourHand.style.transform = `rotate(${hourDegres}deg)`
 }
 
 updateClockHands()
 setInterval(() => updateClockHands(), 1000)
 
 
-let user = {
-  name: 'hasan sujon',
-  age: 23
-}
