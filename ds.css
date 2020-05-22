@@ -9,6 +9,7 @@
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 100;
 }
 #log_model.hide {
   display: none;
