@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Fun witn HTML Canvas</title>
+    <link rel="stylesheet" href="../ds.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+      body {
+        background-color: #fc3;
+        position: relative
+      }
+      #draw {
+        background-color: #ddd;
+      }
+      .controls {
+        background-color: white;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        width: 90vw;
+        height: 60px;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%)
+      }
+
+    </style>
+  </head>
+  <body>
+    <section class="controls">
+      <div>
+        <!-- <label for="multi-line">Multi Line Width</label> -->
+        <!-- <input id="multi-line" name="multi-line" type="checkbox"> -->
+
+        <label for="size-multi">Multi Width
+          <input value="multi" class="radio-line-widht" id="size-multi" name="stroke-width" type="radio">
+        </label>
+        <label for="size-sm">Small
+          <input checked value="10" class="radio-line-widht" id="size-sm" name="stroke-width" type="radio">
+        </label>
+        <label for="size-md">Medium
+          <input value="50" class="radio-line-widht" id="size-md" name="stroke-width" type="radio">
+        </label>
+        <label for="size-lg">Large
+          <input value="100" class="radio-line-widht" id="size-lg" name="stroke-width" type="radio">
+        </label>
+      </div>
+  <hr>
+      <div>
+        <label for="multi-color">Multi Color
+          <input value="multi" class="radio-color" id="multi-color" name="color" type="radio">
+        </label>
+        <label for="color-blue">Blue
+          <input value="blue" class="radio-color" id="color-blue" name="color" type="radio">
+        </label>
+        <label for="color-red">Red
+          <input checked value="red" class="radio-color" id="color-red" name="color" type="radio">
+        </label>
+        <label for="color-green">Green
+          <input value="#BADA55" class="radio-color" id="color-green" name="color" type="radio">
+        </label>
+      </div>
+    </section>
+
+    <canvas id="draw" ></canvas>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
