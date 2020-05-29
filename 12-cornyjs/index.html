@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Corny js</title>
+  <link rel="stylesheet" href="../ds.css">
+</head>
+<body>
+
+<script>
+const log = (value) => {
+  const body = document.querySelector('body')
+  text = JSON.stringify(value, null, 2)
+  const lists = document.querySelector('#log_model ul')
+  if( !lists ) {
+    body.insertAdjacentHTML('afterend',
+      `<div id="log_model">
+        <ul>
+          <li>${text}</li>
+        </ul>
+      </div>`
+    );
+  } else {
+    lists.insertAdjacentHTML('beforeend', `<li>${text}</li>`)
+  }
+}
+window.addEventListener('keyup', (e) => {
+  if(e.key === 'h' && e.altKey) {
+    const model = document.querySelector('#log_model')
+    model.classList.toggle('hide')
+  }
+})
+
+const secrecWorld = 'eaas'
+const pussed = []
+
+window.addEventListener('keyup', (e) => {
+  pussed.push(e.key)
+  pussed.splice(-pussed.length - 1, pussed.length - secrecWorld.length)
+  log(pussed)
+
+  if (pussed.join('').includes(secrecWorld)) {
+    log('ding ding')
+  }
+})
+</script>
+</body>
+</html>
