@@ -1,4 +1,4 @@
-window<addEventListener('keydown', (e)  => playSound(e.key))
+window.addEventListener('keydown', (e) => playSound(e.key))
 const playOnClick = (key) => playSound(key)
 
 function playSound(key) {
@@ -9,6 +9,5 @@ function playSound(key) {
   const btn = document.querySelector(`button[data-key=${key}]`)
   btn.classList.add('styled')
 
-
-  setTimeout(() => btn.classList.remove('styled') ,300)
+  setTimeout(() => btn.classList.remove('styled'), 300)
 }
